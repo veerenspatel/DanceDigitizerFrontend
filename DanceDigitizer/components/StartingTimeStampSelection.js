@@ -18,7 +18,7 @@ const StartingTimeStampSelection = ({handleGetTimeStamp}) => {
     <View style={styles.container}>
       <Video
         ref={videoRef}
-        source={require('/Users/veerenpatel/DanceDigitizer/assets/sample3.mp4')}
+        source={require('/Users/veerenpatel/Desktop/DanceDigitizerProject/DanceDigitizer/assets/sample3.mp4')}
         useNativeControls
         style={styles.video}
       />

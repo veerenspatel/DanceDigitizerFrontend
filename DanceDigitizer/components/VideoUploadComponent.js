@@ -53,7 +53,7 @@ const VideoUploadComponent = () => {
       if (!result.canceled) {
         selectedVideoUri = result.uri;
       } else {
-        selectedVideoUri = "/Users/veerenpatel/DanceDigitizer/assets/sample3.mp4";
+        selectedVideoUri = "/Users/veerenpatel/Desktop/DanceDigitizerProject/DanceDigitizer/assets/sample3.mp4";
       }
       
       
@@ -61,7 +61,7 @@ const VideoUploadComponent = () => {
     } catch (err) {
       console.error('Error selecting/uploading video:', err);
     }
-    setSelectedVideo(require("/Users/veerenpatel/DanceDigitizer/assets/sample3.mp4"))
+    setSelectedVideo(require("/Users/veerenpatel/Desktop/DanceDigitizerProject/DanceDigitizer/assets/sample3.mp4"))
 
   };
 
@@ -71,13 +71,13 @@ const VideoUploadComponent = () => {
       const formData = new FormData();
       console.log(videoUri)
       formData.append('video', {
-        uri: "/Users/veerenpatel/DanceDigitizer/assets/sample3.mp4",
+        uri: "/Users/veerenpatel/Desktop/DanceDigitizerProject/DanceDigitizer/assets/sample3.mp4",
         type: 'video/mp4',
         name: 'test.mp4',
       });
       formData.append('startingStamp',startingStamp)
   
-      const response = await fetch('http://127.0.0.1:5000/process_mp3', {
+      const response = await fetch('http://127.0.0.1:5001/process_mp3', {
         method: 'POST',
         body: formData,
         headers: {
